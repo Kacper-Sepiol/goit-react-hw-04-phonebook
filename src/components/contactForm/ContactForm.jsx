@@ -2,19 +2,14 @@ import css from './FormPhoneBook.module.css';
 import PropTypes from 'prop-types';
 
 const ContactForm = ({
-  name,
   handleChangeName,
   handleChangeNumber,
   handleSubmit,
-  number,
-  sName,
-  inputR,
 }) => (
   <form className={css.form} onSubmit={handleSubmit}>
     <label>
       Name
       <input
-        ref={inputR}
         type="text"
         name="name"
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
@@ -42,9 +37,7 @@ const ContactForm = ({
 export default ContactForm;
 
 ContactForm.propTypes = {
-  name: PropTypes.string.isRequired,
   handleChangeName: PropTypes.func.isRequired,
   handleChangeNumber: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  number: PropTypes.string.isRequired,
 };

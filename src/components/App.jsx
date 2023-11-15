@@ -4,7 +4,7 @@ import ContactForm from './contactForm/ContactForm';
 import ContactList from './contactList/ContactList';
 import Filter from './filter/Filter';
 import { nanoid } from 'nanoid';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 const COPY_CONTACTS = [
   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -23,10 +23,6 @@ export const App = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [filter, setFilter] = useState('');
-
-  const inputRef = useRef(null);
-
-  // const copyContacts = useMemo(() => [...contacts], [contacts]);
 
   useEffect(() => {
     console.log('komponent został zamontowany');
@@ -108,7 +104,6 @@ export const App = () => {
         handleChangeNumber={handleChangeNumber}
         handleSubmit={handleSubmit}
         sName={setName}
-        inputR={inputRef}
       ></ContactForm>
 
       <h2>Contacts</h2>
