@@ -1,5 +1,4 @@
 import React from 'react';
-// import './index.css';
 import ContactForm from './contactForm/ContactForm';
 import ContactList from './contactList/ContactList';
 import Filter from './filter/Filter';
